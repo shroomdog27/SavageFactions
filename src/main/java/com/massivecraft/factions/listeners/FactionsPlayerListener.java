@@ -661,6 +661,8 @@ public class FactionsPlayerListener implements Listener {
                 type = XMaterial.matchXMaterial(event.getItem().getType().toString()).get().parseMaterial();
             } catch (NullPointerException npe) {
                 type = null;
+            } catch (NoSuchElementException nsee) {
+                type = null;
             }
         } else {
             type = null;

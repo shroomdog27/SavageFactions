@@ -1,29 +1,30 @@
 package com.massivecraft.factions.integration;
 
+import com.earth2me.essentials.Essentials;
 import com.earth2me.essentials.Teleport;
 import com.earth2me.essentials.Trade;
 import com.earth2me.essentials.User;
 import com.massivecraft.factions.Conf;
-import net.ess3.api.IEssentials;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.metadata.MetadataValue;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import java.math.BigDecimal;
 
-public class Essentials {
+public class EssentialsIntegration {
 
-    private static IEssentials essentials;
+    private static Essentials essentials;
 
     public static void setup() {
-        essentials = (IEssentials) Bukkit.getPluginManager().getPlugin("Essentials");
+        essentials = JavaPlugin.getPlugin(Essentials.class);
     }
 
     // return false if feature is disabled or Essentials isn't available
-    public static boolean handleTeleport(Player player, Location loc) {
+    @SuppressWarnings("deprecation")
+	public static boolean handleTeleport(Player player, Location loc) {
         if (!Conf.homesTeleportCommandEssentialsIntegration || essentials == null) return false;
 
         Teleport teleport = essentials.getUser(player).getTeleport();

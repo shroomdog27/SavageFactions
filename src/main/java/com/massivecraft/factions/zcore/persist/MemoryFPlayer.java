@@ -7,7 +7,7 @@ import com.massivecraft.factions.event.FactionDisbandEvent.PlayerDisbandReason;
 import com.massivecraft.factions.iface.EconomyParticipator;
 import com.massivecraft.factions.iface.RelationParticipator;
 import com.massivecraft.factions.integration.Econ;
-import com.massivecraft.factions.integration.Essentials;
+import com.massivecraft.factions.integration.EssentialsIntegration;
 import com.massivecraft.factions.integration.Worldguard;
 import com.massivecraft.factions.scoreboards.FScoreboard;
 import com.massivecraft.factions.scoreboards.sidebar.FInfoSidebar;
@@ -301,7 +301,7 @@ public abstract class MemoryFPlayer implements FPlayer {
     }
 
     public boolean isVanished() {
-        return Essentials.isVanished(getPlayer());
+        return EssentialsIntegration.isVanished(getPlayer());
     }
 
     public void setIsAdminBypassing(boolean val) {

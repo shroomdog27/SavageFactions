@@ -583,7 +583,8 @@ public class Conf {
         safeZoneNerfedCreatureTypes.add(EntityType.ENDERMAN);
         safeZoneNerfedCreatureTypes.add(EntityType.GHAST);
         safeZoneNerfedCreatureTypes.add(EntityType.MAGMA_CUBE);
-        safeZoneNerfedCreatureTypes.add(EntityType.PIG_ZOMBIE);
+        safeZoneNerfedCreatureTypes.add(EntityType.PIGLIN);
+        safeZoneNerfedCreatureTypes.add(EntityType.PIGLIN_BRUTE);
         safeZoneNerfedCreatureTypes.add(EntityType.SILVERFISH);
         safeZoneNerfedCreatureTypes.add(EntityType.SKELETON);
         safeZoneNerfedCreatureTypes.add(EntityType.SPIDER);

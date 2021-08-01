@@ -155,7 +155,7 @@ public class SavageFactions extends MPlugin {
 
         new ConfigVersion.Checker().checkLevel().TakeActionIfRequired().save();
 
-        com.massivecraft.factions.integration.Essentials.setup();
+        com.massivecraft.factions.integration.EssentialsIntegration.setup();
         hookedPlayervaults = setupPlayervaults();
         FPlayers.getInstance().load();
         Factions.getInstance().load();
